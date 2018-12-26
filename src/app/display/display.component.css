@@ -1,0 +1,44 @@
+td{
+    padding:1px;
+}
+td   {
+    font-size: 1rem;
+    padding:5px;
+  
+}
+
+.monthDay{
+    color: red !important;
+}
+.table{
+    background: #222222;
+    color: white;
+    padding: 10px;
+    padding: 10px;
+    border-right:5px solid #808080;
+    border-bottom:5px solid #808080;
+
+}
+.header{
+    background: #222222;
+    color: white;
+    border-right:5px solid #808080;
+
+}
+.row{margin:0;}
+body{
+    font-family: Lato Light;
+}
+td:hover{
+    background: #3A393A;
+    border:1px solid #808080;
+}
+a{
+    color:white;
+}
+.today{
+    border-left: 10px solid blue;
+    font-size: 1.4rem !important;
+    color: blue;
+    font-weight: bold;
+}

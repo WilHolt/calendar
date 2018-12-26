@@ -1,0 +1,50 @@
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+<div class="row ">
+  <div class="col s3 MonthAndYear center header">
+   
+    <h5>
+      <span> <a (click)="prevMonth()"> < </a></span>
+      {{this.currentMonth}} and {{this.currentYear}}
+       <span><a (click)="nextMonth()"> > </a></span>
+      </h5>
+
+
+  </div>
+</div>
+<div class="row">
+  <tbody class="col s3 table">
+    <table>
+      <thead>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tues</th>
+            <th>Wed</th>
+            <th>Thurs</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+      </thead>
+
+      <tbody class="row" *ngFor="let d of calendar" >
+          <tr class="center">
+              <td (click)="setSelected(d.days[0])"><h6>{{d.days[0].mDate.date()-1}}</h6></td>
+              <td [ngClass]="{today: d.days[2].today == true}"><h6 class="center" >{{d.days[1].mDate.date()-1}}</h6></td>
+              <td [ngClass]="{today: d.days[2].today == true}"><h6 class="center"  >{{d.days[2].mDate.date()-1}}</h6></td>
+              <td [ngClass]="{today: d.days[2].today ==true}"><h6 class="center">{{d.days[3].mDate.date()-1}}</h6></td>
+              <td [ngClass]="{today: d.days[2].today == true}"><h6 class="center">{{d.days[4].mDate.date()-1}}</h6></td>
+              <td [ngClass]="{today: d.days[2].today == true}"><h6 class="center">{{d.days[5].mDate.date()-1}}</h6></td>
+              <td [ngClass]="{today: d.days[2].today == true}"><h6 class="center">{{d.days[6].mDate.date()-1}}</h6></td>
+
+
+           </tr> 
+       
+      </tbody>
+    </table>
+  </div>
